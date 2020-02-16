@@ -1,0 +1,48 @@
+/* Utility classes */
+/* prettier-ignore-start */
+
+.container { 
+  max-width: 1170px;
+  margin: auto;
+  /* overflow: hidden; */
+  /* padding: 16px; */
+  
+}
+
+
+
+.p-x15 { padding-right: 15px; padding-left: 15px; } 
+.p-1rem { padding: 15px; background-color: white;}
+
+/* Cikk kategória háttérszín */
+.category-hir {
+  background: #ddd;
+  padding: 0px 10px;
+}
+
+.category-it {
+  background: #568db5;
+  color: white;
+  padding: 4px 10px;
+}
+
+/* Text on image for articles with image */
+.box h1, .box h2, .box h3, .textOnImage h1 {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+  font-family: "Open Sans",sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px #000;
+}
+
+/* For some reason stuff don't have equal height and text doesn't perfectly hover the image, this and vertical-align:middle together fixes it */
+.main-article *, .main-article-left *, .main-article-right *, .article-top *, .article-bottom * {
+  height: 100%; 
+}

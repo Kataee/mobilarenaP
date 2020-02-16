@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8eeeedbce1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Naming Lines in CSS Grid!</title>
+</head>
+
+<body>
+  <!-- --------------------------------------------------------------------------- -->
+  <style>
+    /*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+    :root {
+      --yellow: #ffc600;
+      --black: #272727;
+    }
+
+    html {
+      /* border-box box model allows us to add padding and border to our elements without increasing their size */
+      box-sizing: border-box;
+      /* A system font stack so things load nice and quick! */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 16px;
+      color: var(--black);
+      text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    /*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      background-image: url("./images/topography.svg"),
+        linear-gradient(110deg, #f93d66, #6d47d9);
+      background-size: 340px, auto;
+      min-height: calc(100vh - 100px);
+      /* background: white; */
+      background-attachment: fixed;
+    }
+  </style>
+
+  <div class="container">
+    <!-- ---------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="box1">
+        <a href="#"><img src="./img/articles-on-sites/gamer-pc.jpg" alt=""></a>
+        <div class="textOnImage">
+          <a href="#">
+            <h2>Milyen alapokra építsünk játékra szánt gépet?</h2>
+          </a>
+          <div class="article-comments"> <a href=""><i class="fas fa-comments"></i>17</a> </div>
+        </div>
+      </div>
+
+
+      <div class="gradient">
+        <ul>
+          <li><a href="#" class="article1">Olvadó árak a hűvös időre</a></li>
+          <li><a href="#" class="article2">Lehetne még tényező a Sharp a tévés piacon?</a></li>
+          <li><a href="#" class="more-prohardver">Még több PROHARDVER!...</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="box1">
+        <a href="#"><img src="./img/articles-on-sites/gamer-pc.jpg" alt=""></a>
+        <div class="textOnImage">
+          <a href="#">
+            <h2>Milyen alapokra építsünk játékra szánt gépet?</h2>
+          </a>
+          <div class="article-comments"> <a href=""><i class="fas fa-comments"></i>17</a> </div>
+        </div>
+      </div>
+
+
+      <div class="gradient">
+        <ul>
+          <li><a href="#" class="article1">Olvadó árak a hűvös időre</a></li>
+          <li><a href="#" class="article2">Lehetüe még tényező a Sharp a tévés piacon?</a></li>
+          <li><a href="#" class="more-prohardver">Még több PROHARDVER!...</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="box1">
+        <a href="#"><img src="./img/articles-on-sites/gamer-pc.jpg" alt=""></a>
+        <div class="textOnImage">
+          <a href="#">
+            <h2>Milyen alapokra építsünk játékra szánt gépet?</h2>
+          </a>
+          <div class="article-comments"> <a href=""><i class="fas fa-comments"></i>17</a> </div>
+        </div>
+      </div>
+
+      <div class="gradient">
+        <ul>
+          <li><a href="#" class="article1">Olvadó árak a hűvös időre</a></li>
+          <li><a href="#" class="article2">Lehetüe még tényező a Sharp a tévés piacon?</a></li>
+          <li><a href="#" class="more-prohardver">Még több PROHARDVER!...</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="box1">
+        <a href="#"><img src="./img/articles-on-sites/gamer-pc.jpg" alt=""></a>
+        <div class="textOnImage">
+          <a href="#">
+            <h2>Milyen alapokra építsünk játékra szánt gépet?</h2>
+          </a>
+          <div class="article-comments"> <a href=""><i class="fas fa-comments"></i>17</a> </div>
+        </div>
+      </div>
+
+
+      <div class="gradient">
+        <ul>
+          <li><a href="#" class="article1">Olvadó árak a hűvös időre</a></li>
+          <li><a href="#" class="article2">Lehetüe még tényező a Sharp a tévés piacon?</a></li>
+          <li><a href="#" class="more-prohardver">Még több PROHARDVER!...</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      width: 1170px;
+      background: white;
+      margin: auto;
+    }
+
+
+
+    .box {
+      position: relative;
+      border: 1px white solid;
+    }
+
+    .box1 {
+      position: relative;
+    }
+
+    .box img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .textOnImage {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .textOnImage h2 {
+      height: auto;
+      padding: 0 1rem;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: white;
+      text-shadow: 0 0 2px #000;
+    }
+
+
+    .article-comments {
+      position: relative;
+      width: 35px;
+      font-size: 0.875rem;
+      height: auto;
+      flex-shrink: 0;
+
+    }
+
+    .article-comments a {
+      position: absolute;
+      color: white;
+      width: 100%;
+      font-weight: 400;
+      bottom: 1rem;
+      right: 0.5rem;
+    }
+
+    .article-comments i {
+      margin-right: 2px;
+    }
+
+    /* --------------------------------------------------------------- */
+
+    .gradient {
+      background: linear-gradient(to bottom, #fef4cd, transparent 50%);
+      border-top: 0.25rem #fad236 solid;
+      padding: 0 0.5rem;
+    }
+
+    .gradient a {
+      display: block;
+      color: black;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.5rem 0;
+    }
+
+    .gradient li:last-child a {
+      color: #deb206;
+    }
+  </style>
+
+
+</body>
+
+</html>
